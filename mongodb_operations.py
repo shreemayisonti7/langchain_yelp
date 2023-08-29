@@ -47,8 +47,8 @@ print(my_db.list_collection_names())
 x = yelp_collection.find_one()
 print(x)
 
-# To view all the documents from the collection and sorting based on key Restaurant Name
-for x in yelp_collection.find().sort("Restaurant Name"):
+# To view all the documents from the collection and sorting based on key Restaurant Name and limit to 5 documents
+for x in yelp_collection.find().sort("Restaurant Name").limit(5):
     print(x)
 
 # Filtering using query to retrieve Restaurants on Newark Ave.
